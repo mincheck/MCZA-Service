@@ -1,0 +1,181 @@
+@font-face {
+    font-family: 'font';
+    src: url(../assets/Montserrat.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'font';
+}
+
+#background_video {
+    margin: auto;
+    position: fixed;
+    left: 0;
+    right: 0;
+    min-height: 100%;
+    min-width: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;     
+    object-fit: cover;
+}
+
+.mobile-video {
+    display: none;
+}
+
+.content {
+    position: relative;
+    padding-top: 10px;
+    margin: auto;
+    max-width: 650px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 30px;
+}
+
+.logo {
+    width: 210px;
+    height: 110px;
+    margin: 30px 0;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(7px);
+    border-radius: 60px;
+    
+}
+
+.welcome-text {
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: white;
+}
+
+main {
+    margin: 30px;
+}
+
+.container {
+    width: 100%;
+    height: 550px;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(7px);
+    border-radius: 60px;
+}
+
+.select-text {
+    padding: 50px 0;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: white;
+}
+
+.container nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+    padding: 0 80px;
+}
+
+.container nav a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 700;
+    width: 100%;
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(7px);
+    border-radius: 60px;
+    text-decoration: none;
+    color: white;
+    transition: 0.5s;
+    &:hover {
+       transform: scale(1.03);
+    }
+}
+
+
+@media (max-width: 455px) {
+    .content {
+        margin: auto;
+        max-width: 400px;
+    }
+
+    .desktop-video {
+        display: none;
+    }
+
+    .mobile-video {
+        display: block;
+    }
+
+    .logo {
+        margin-top: 80px;
+        width: 165px;
+        height: 85px;
+    }
+
+    .menu {
+        display: flex;
+        width: 100%;  
+        height: 55px;
+        gap: 10px
+    }
+
+    .welcome-text {
+        font-size: 1.5rem;
+        font-weight: 300;
+    }
+    
+    .container {
+        width: 100%;
+        height: 410px;
+    }
+
+    .select-text {
+        padding: 40px 0;
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    .container nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 0 40px;
+    }
+
+    .container nav a {
+        font-size: 1.5rem;
+        width: 100%;
+        height: 65px;
+        transition: 0.5s;
+        &:hover {
+            transform: scale(1.00);
+        }
+    }
+}
